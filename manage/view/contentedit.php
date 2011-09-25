@@ -48,35 +48,21 @@
                 </tr>
                 <tr>
                     <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2"><?=$msg['title']?>:</span></td>
-                    <td><?=$news['type']?></td>
+                    <td><?=$news['title']?></td>
                 </tr>
                 <tr>
-                    <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2"><?=$msg['title']?>:</span></td>
+                    <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2">语言:</span></td>
                     <td>
-                        <input name="title" type="text" maxlength="250" id="title" style="width:470px;" value="<?=$news['title']?>" />
-                        <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" style="color:Red;visibility:hidden;">*</span>
-
+						<select name="lan_type">
+							<option value="1" <?=is_selected($news['lan_type'],'1')?>>中文</option>
+							<option value="2" <?=is_selected($news['lan_type'],'2')?>>英文</option>
+						</select>
                     </td>
                 </tr>
                 <tr>
                     <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label7"><?=$msg['content']?>:</span></td>
                     <td><textarea rows="10" cols="10" id="content" name="content" style="width:700px;height:400px;"><?=$news['content']?></textarea></td>
                 </tr>
-                <tr>
-                    <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label7"><?=$msg['upload']?>:</span></td>
-                    <td><input type="file" style="width:600px;" maxlength="250" name="imgfile"></td>
-                </tr>
-                <?php 
-                $link	=	trim($news['link']);
-                if (!empty($link)){
-                ?>
-                <tr>
-                    <td align="right" class="tdTitle"></td>
-                    <td><a href="<?=$GLOBALS['updoc'].$link?>" target="_blank"><?=$msg['download']?></a></td>
-                </tr>
-                <?php 
-                }
-                ?>
             </table>
         </td>
     </tr>

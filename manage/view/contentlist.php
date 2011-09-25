@@ -78,12 +78,11 @@
 		<tbody>
 		<?php 
 		if (!empty($newslist)) foreach ($newslist as $news){
-			fromStr($news);
 		?>
 			<tr class="RowStyle">
 	            <td align="center"><?=$news['chncup_id']?></td>
 	            <td align="center">
-	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=content&method=edit&id=<?=$news['chncup_id']?>"><?=$news['type']?></a>
+	            	<?=($news['lan_type']=='1')?'中文':'英文'?>
 	            </td>
 	            <td align="left">
 	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=content&method=edit&id=<?=$news['chncup_id']?>"><?=$news['title']?></a>

@@ -10,11 +10,9 @@
 
         <tr align="center" valign="middle">
             <td width="86" style="width: 86px; height: 30px">
-                <a href="<?=$GLOBALS['admin_root']?>index.php?lang=en" target="_top" class="navLink">English</a>
             </td>
             <td style="width: 86px; height: 30px">
              
-                <a href="<?=$GLOBALS['admin_root']?>index.php?lang=cn" target="_top" class="navLink">Chinese</a>
             </td>
             <td>&nbsp;</td>
 

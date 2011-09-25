@@ -25,7 +25,7 @@ class CategoryAction extends RAF_Action {
 			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
 		}
 		
-		$where	=	"lan_type = '".$GLOBALS['lantype']."' AND category_type = '".$this->catetype."'";
+		$where	=	"1 = 1";
 		$order	=	"show_order desc";
 		$catinfo	=	$db->getAllRow("chn_category",$where,$order);
 		
@@ -42,20 +42,12 @@ class CategoryAction extends RAF_Action {
 		$msg	=	$GLOBALS['msg']['alert'];
 		
 		$post	=	$this->doPost();
-		toStr($post);
 		
 		if (empty($post['category_name'])){
 			alert($msg['noname']);
 		}
-		$data	=	array(
-			'create_date'		=>	date('Y-m-d H:i:s'),
-			'create_user_id'	=>	$this->access['accessid'],
-			'lan_type'			=>	$GLOBALS['lantype'],
-			'category_type' 	=> 	$this->catetype,
-		);
-		$data	=	array_merge($data,$post);
 		$db	=	DB::factory();
-		$res	=	$db->insert('chn_category',$data);
+		$res	=	$db->insert('chn_category',$post);
 		if ($res){
 			alert($msg['addsuc'],$_SESSION['request_url'],1);
 		}else{
@@ -72,7 +64,6 @@ class CategoryAction extends RAF_Action {
 		
 		$db	=	DB::factory();
 		$cate	=	$db->getOneRow("chn_category","category_id = '".$cate_id."'");
-		fromStr($cate);		
 		include 'view/cateedit.php';
 	}
 	
@@ -86,18 +77,12 @@ class CategoryAction extends RAF_Action {
 		}
 		
 		$post	=	$this->doPost();
-		toStr($post);
 		
 		if (empty($post['category_name'])){
 			alert($msg['noname']);
 		}
-		$data	=	array(
-			'update_date'		=>	date('Y-m-d H:i:s'),
-			'update_user_id'	=>	$this->access['accessid'],
-		);
-		$data	=	array_merge($data,$post);
 		$db	=	DB::factory();
-		$res	=	$db->update('chn_category',$data,"category_id = '".$cate_id."'");
+		$res	=	$db->update('chn_category',$post,"category_id = '".$cate_id."'");
 		if ($res){
 			alert($msg['editsuc'],$_SESSION['request_url'],1);
 		}else{

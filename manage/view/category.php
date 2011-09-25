@@ -12,7 +12,7 @@
                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                         <td style="width:50px;" align="center"><img src="images/icon4.png"/></td>
-                        <td style="height:35px;">&nbsp;<span id="ctl00_lblTitle" class="Title"><?=$msg['category'.$this->catetype]?> </span></td>
+                        <td style="height:35px;">&nbsp;<span id="ctl00_lblTitle" class="Title">图片管理</span></td>
 
                     </tr>
                 </table>
@@ -38,21 +38,18 @@
 		<tr class="HeaderStyle">
 			<th scope="col"><?=$msg['name']?></th>
 			<th scope="col"><?=$msg['isshow']?></th>
-			<th scope="col"><?=$msg['order']?></th>
-			<th scope="col"><?=$msg['upadmin']?></th>
+			<th scope="col">语言</th>
 			<th scope="col"><?=$msg['update']?></th>
 		</tr>
 		</thead>
 		<tbody>
 		<?php 
 		if (!empty($catinfo)) foreach($catinfo as $w){
-			//fromStr($w);
 			?>
 			<tr class="RowStyle">				
-	            <td align="center"><?=cstr($w['category_name'])?></td>
+	            <td align="center"><?=$w['category_name']?></td>
 	            <td align="center"><?=($w['show_flag']=='1'?$msg['yes']:$msg['no'])?></td>
-	            <td align="center"><?=$w['show_order']?></td>
-	            <td align="center"><?=isset($adminlist[$w['update_user_id']]) ? $adminlist[$w['update_user_id']] : $msg['null']?></td>
+	            <td align="center"><?=($w['lan_type']=='1')?'中文':'英文'?></td>
 	            <td align="center">
 	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=category&method=edit&id=<?=$w['category_id'] ?>"><?=$msg['edit']?></a>
 	            	|

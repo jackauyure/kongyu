@@ -80,7 +80,7 @@ class Upload {
 	 * $ext       图片后缀
 	 * 
 	 */
-    private function resize_image($filename, $xmax = 120, $ymax = 70 ,$ext){			           	
+    private function resize_image($filename, $xmax = 200, $ymax = 100 ,$ext){			           	
 				switch ($ext){	
 					case "jpg":		
 					    $im = imagecreatefromjpeg($filename);			

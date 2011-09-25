@@ -12,7 +12,7 @@
                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                         <td style="width:50px;" align="center"><img src="images/icon4.png"/></td>
-                        <td style="height:35px;">&nbsp;<span id="ctl00_lblTitle" class="Title"><?=$msg['category'.$this->catetype]?></span></td>
+                        <td style="height:35px;">&nbsp;<span id="ctl00_lblTitle" class="Title">图片管理</span></td>
                     </tr>
                 </table>              
             </td>
@@ -21,14 +21,20 @@
 		<td >
 		<form action="<?=$GLOBALS['admin_root']?>index.php?action=category&method=editsure&id=<?=$cate_id?>" method="post"  target="rightframe">
        		<table border="0" width="95%" align="center">
+			 <tr class="tdTitle">
+				<td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2">语言:</span></td>
+				<td>
+					<select name="lan_type">
+						<option value="1" <?=is_selected($cate['lan_type'],'1')?>>中文</option>
+						<option value="2" <?=is_selected($cate['lan_type'],'2')?>>英文</option>
+					</select>
+				</td>
+				</tr>
 		        <tr>
-		         <td><?=$msg['name']?>:</td><td><input type="text" name="category_name" value="<?=$cate['category_name']?>" /></td>
-		        </tr>
-		        <tr>
-		         <td><?=$msg['order']?>:</td><td><input type="text" name="show_order" value="<?=$cate['show_order']?>" /></td>
-		        </tr>  
+		         <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2"><?=$msg['name']?>:</span></td><td><input type="text" name="category_name" value="<?=$cate['category_name']?>" /></td>
+		        </tr> 
 		         <tr>
-		         <td><?=$msg['isshow']?>:</td>
+		         <td align="right" class="tdTitle"><span id="ctl00_ContentPlaceHolder1_Label2"><?=$msg['isshow']?>:</span></td>
 		         <td>
 		           <select name="show_flag">
 		              <option value="1" <?=is_selected($cate['show_flag'],'1')?>><?=$msg['yes']?></option>

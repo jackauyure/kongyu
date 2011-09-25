@@ -19,7 +19,7 @@ class NewsAction extends RAF_Action {
 		 */
 		$this->allow	=	array(
 			'1'	=>	array('type','title','order','show','upload','link'),
-			'2'	=>	array('type','title','tiny','shorttitle','keyword','newsdate','show','content','toindex','tofocus','topic','upload'),
+			'2'	=>	array('type','order','show','upload'),
 			'6'	=>	array('type','title','order','show','content','upload'),
 			'9'	=>	array('type','title','newsdate','show','content'),
 			'11'	=>	array('type','title','show','upload'),
@@ -40,25 +40,25 @@ class NewsAction extends RAF_Action {
 		$db	=	DB::factory();
 		$row	=	$db->getAllRow("chn_users");
 		if (!empty($row)) foreach ($row as $tmp){
-			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
+			$adminlist[$tmp['user_id']]	=	$tmp['user_name'];
 		}
-		$row	=	$db->getAllRow("chn_category","show_flag = '1' AND lan_type = '".$GLOBALS['lantype']."' AND category_type = '".$this->catetype."'","show_order desc");
+		$row	=	$db->getAllRow("chn_category","show_flag = '1'","show_order desc");
 		if (!empty($row)) foreach ($row as $tmp){
-			$categorylist[$tmp['category_id']]	=	cstr($tmp['category_name']);
+			$categorylist[$tmp['category_id']]	=	$tmp['category_name'];
 		}
 		
-		$where	=	"lan_type = '".$GLOBALS['lantype']."' AND category_type = '".$this->catetype."'";
+		$where	=	"1=1";
 		$sctitle	=	$this->doGet('title','');
 		if (!empty($sctitle)){
-			$where	.=	" AND title like '%".cstr($sctitle,'utf8','gbk')."%'";
+			$where	.=	" AND title like '%".$sctitle."%'";
 		}
 		$sccategory	=	$this->doGet('category_id','');
 		if (!empty($sccategory)){
 			$where	.=	" AND category_id = '".$sccategory."'";
 		}
-		$index_flag	=	$this->doGet('index_flag','');
-		if ($index_flag != ''){
-			$where	.=	" AND index_flag = '".$index_flag."'";
+		$lan_type	=	$this->doGet('lan_type','');
+		if ($lan_type != ''){
+			$where	.=	" AND lan_type = '".$lan_type."'";
 		}
 		$pageNum	=	20;
 		$pageConfig	=	array(
@@ -85,11 +85,11 @@ class NewsAction extends RAF_Action {
 		$db	=	DB::factory();
 		$row	=	$db->getAllRow("chn_users");
 		if (!empty($row)) foreach ($row as $tmp){
-			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
+			$adminlist[$tmp['user_id']]	=	$tmp['user_name'];
 		}
-		$row	=	$db->getAllRow("chn_category","show_flag = '1' AND lan_type = '".$GLOBALS['lantype']."' AND category_type = '".$this->catetype."'","show_order desc");
+		$row	=	$db->getAllRow("chn_category","show_flag = '1'","show_order desc");
 		if (!empty($row)) foreach ($row as $tmp){
-			$categorylist[$tmp['category_id']]	=	cstr($tmp['category_name']);
+			$categorylist[$tmp['category_id']]	=	$tmp['category_name'];
 		}
 		include 'view/newsadd.php';
 	}
@@ -104,7 +104,6 @@ class NewsAction extends RAF_Action {
 			$post['content']	=	$_POST['content'];
 		}
 		unset($post['submit']);
-		toStr($post);
 		
 		/*
 		 * 'type','title','tiny','shorttitle','keyword','order','newsdate','show','content','toindex','tofocus','upload'
@@ -137,10 +136,7 @@ class NewsAction extends RAF_Action {
 		}
 	   	
 		$data	=	array(
-			'create_date'		=>	date('Y-m-d H:i:s'),
-			'create_user_id'	=>	$this->access['accessid'],
 			'lan_type'			=>	$GLOBALS['lantype'],
-			'category_type' 	=> 	$this->catetype,
 			'team_img' 			=> 	$fileUrl,
 		);
 		$data	=	array_merge($data,$post);
@@ -167,15 +163,14 @@ class NewsAction extends RAF_Action {
 		$db	=	DB::factory();
 		$row	=	$db->getAllRow("chn_users");
 		if (!empty($row)) foreach ($row as $tmp){
-			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
+			$adminlist[$tmp['user_id']]	=	$tmp['user_name'];
 		}
-		$row	=	$db->getAllRow("chn_category","show_flag = '1' AND lan_type = '".$GLOBALS['lantype']."' AND category_type = '".$this->catetype."'","show_order desc");
+		$row	=	$db->getAllRow("chn_category","show_flag = '1'","show_order desc");
 		if (!empty($row)) foreach ($row as $tmp){
-			$categorylist[$tmp['category_id']]	=	cstr($tmp['category_name']);
+			$categorylist[$tmp['category_id']]	=	$tmp['category_name'];
 		}
 		
 		$news	=	$db->getOneRow("chn_news","news_id = '".$news_id."'");
-		fromStr($news);
 		include 'view/newsedit.php';
 	}
 	
@@ -192,7 +187,6 @@ class NewsAction extends RAF_Action {
 			$post['content']	=	$_POST['content'];
 		}
 		unset($post['submit']);
-		toStr($post);
 	     
 		$allow	=	isset($this->allow[$this->catetype])?$this->allow[$this->catetype]:array();
 		/*
@@ -225,8 +219,6 @@ class NewsAction extends RAF_Action {
 		   	$fileUrl	=	$up->filename;
 		}
 		$data	=	array(
-			'update_date'		=>	date('Y-m-d H:i:s'),
-			'update_user_id'	=>	$this->access['accessid'],
 			'team_img' 		    => 	$fileUrl,
 		);
 		$data	=	array_merge($data,$post);

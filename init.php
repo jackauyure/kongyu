@@ -56,4 +56,29 @@ $GLOBALS['upimages']       =   $GLOBALS['www_root'].'upload/images/';
 $GLOBALS['upvideo']        =   $GLOBALS['www_root'].'upload/video/'; 
 
 $GLOBALS['view']	=	dirname(__FILE__).'/view/';
+
+$GLOBALS['url']	=	array(
+	// 0-8
+	'?action=content&method=about',
+	$GLOBALS['www_root'],
+	$GLOBALS['en_root'],
+	'?action=content&method=shebei',
+	'?action=content&method=kehu',
+	'?action=content&method=shehuizeren',
+	'?action=news&id=2',
+	'?action=content&method=shebei',
+	'?action=content&method=shebei',
+
+	// 9-13
+	'?action=content&method=shebei',
+	'?action=content&method=pinzhi',
+	'?action=content&method=weizhi',
+	'?action=content&method=tuandui',
+	'?action=content&method=xinxibaohu',
+
+	// 14-15
+	'?action=news&id=2',
+	'?action=news&id=3',
+);
+
 ?>

@@ -23,7 +23,7 @@ class ContentAction extends RAF_Action {
 		
 		$db	=	DB::factory();
 		
-		$where	=	"lan_type = '".$GLOBALS['lantype']."'";
+		$where	=	"1 = 1";
 		$sctitle	=	$this->doGet('title','');
 		if (!empty($sctitle)){
 			$where	.=	" AND title like '%".cstr($sctitle,'utf8','gbk')."%'";
@@ -60,7 +60,6 @@ class ContentAction extends RAF_Action {
 		$db	=	DB::factory();
 		
 		$news	=	$db->getOneRow("chn_chncup","chncup_id = '".$id."'");
-		fromStr($news);
 		include 'view/contentedit.php';
 	}
 	
@@ -75,26 +74,21 @@ class ContentAction extends RAF_Action {
 		$post	=	$this->doPost();
 		$post['content']	=	$_POST['content'];
 		unset($post['submit']);
-		toStr($post);
 		
-		if (empty($post['title'])){
-			alert($msg['notitle']);
-		}
 		if (empty($post['content'])){
 			alert($msg['nocontent']);
 		}
-		$path = $GLOBALS['upload_doc']; 	
-	   	$file = $_FILES['imgfile']; 
-	   	$up	=	new Upload($path, $file);
-	   	$fresult = $up->doup();	   
+		//$path = $GLOBALS['upload_doc']; 	
+	   //$file = $_FILES['imgfile']; 
+	   //$up	=	new Upload($path, $file);
+	   //$fresult = $up->doup();	   
 	   	
-		$data	=	array(
-			'update_date'	=>	date('Y-m-d H:i:s'),
-	   		'link'			=>	$up->filename,
-		);
-		$data	=	array_merge($data,$post);
+		//$data	=	array(
+	   		//'link'			=>	$up->filename,
+		//);
+		//$data	=	array_merge($data,$post);
 		$db	=	DB::factory();
-		$res	=	$db->update('chn_chncup',$data,"chncup_id='".$news_id."'");
+		$res	=	$db->update('chn_chncup',$post,"chncup_id='".$news_id."'");
 		if ($res){
 			alert($msg['editsuc'],$_SESSION['request_url'],1);
 		}else{

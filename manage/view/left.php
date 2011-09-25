@@ -32,45 +32,13 @@
             </tr>
         </table>
     </div>
-    <div class="menu_list2" id="content1" style="display:none;">
+    <div class="menu_list2" id="content1">
         <ul>               
             <li>
                 <table border="0" width="80%" style="height:100%;" align="center">
                     <tr>
                         <td width="20"><img src="images/icon3.png" /> </td>
                         <td><a href="index.php?action=content" class="navLink" target="rightframe">信息管理</a></td>                        
-                    </tr>
-                </table>
-            </li>                
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=1" class="navLink" target="rightframe">赞助商分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>          
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=1" class="navLink" target="rightframe">赞助商列表</a></td>                        
-                    </tr>
-                </table>
-            </li>                 
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=12" class="navLink" target="rightframe">友情链接分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>          
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=12" class="navLink" target="rightframe">友情链接列表</a></td>                        
                     </tr>
                 </table>
             </li>  
@@ -80,7 +48,7 @@
 
         <table border="0" width="80%" style="height:100%;" align="center">
             <tr>
-                <td><a class="articleTitle" href="javascript:ShowContent(2)" >网站新闻管理</a></td>
+                <td><a class="articleTitle" href="javascript:ShowContent(2)" >网站图片管理</a></td>
                 <td width="40"><a href="javascript:ShowContent(2)" ><img src="images/icon1.png" id="Img2" border="0"/></a></td>
             </tr>
         </table>
@@ -92,7 +60,7 @@
                 <table border="0" width="80%" style="height:100%;" align="center">
                     <tr>
                         <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=2" class="navLink" target="rightframe">新闻分类管理</a></td>                        
+                        <td><a href="index.php?action=category&catetype=2" class="navLink" target="rightframe">图片分类管理</a></td>                        
                     </tr>
                 </table>
             </li>                        
@@ -101,105 +69,7 @@
                 <table border="0" width="80%" style="height:100%;" align="center">
                     <tr>
                         <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=2"  class="navLink" target="rightframe">新闻列表</a></td>                        
-                    </tr>
-                </table>
-            </li>         
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=9" class="navLink" target="rightframe">帆船ABC分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>                        
-            <li>
-
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=9"  class="navLink" target="rightframe">帆船ABC列表</a></td>                        
-                    </tr>
-                </table>
-            </li>
-            <li>
-
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=3"  class="navLink" target="rightframe">图片分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>
-            <li>
-
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=pics"  class="navLink" target="rightframe">图片列表</a></td>                        
-                    </tr>
-                </table>
-            </li>
-            <li>
-
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=4"  class="navLink" target="rightframe">视频分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>
-            <li>
-
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=video"  class="navLink" target="rightframe">视频列表</a></td>                        
-                    </tr>
-                </table>
-            </li>
-        </ul>
-    </div>
-    <div id="head3" class="headClass">
-        <table border="0" width="80%" style="height:100%;" align="center">
-            <tr>
-                <td><a class="articleTitle" href="javascript:ShowContent(3)" >赛事中心</a></td>
-                <td width="40"><a href="javascript:ShowContent(3)" ><img src="images/icon1.png" id="Img3" border="0"/></a></td>
-            </tr>
-        </table>
-    </div>
-    <div class="menu_list2" id="content3" style="display:none;">
-
-        <ul>               
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=6" class="navLink" target="rightframe">船队组别管理</a></td>                        
-                    </tr>
-                </table>
-            </li>          
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=6" class="navLink" target="rightframe">船队资料</a></td>                        
-                    </tr>
-                </table>
-            </li>         
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=category&catetype=11" class="navLink" target="rightframe">下载分类管理</a></td>                        
-                    </tr>
-                </table>
-            </li>          
-            <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=news&catetype=11" class="navLink" target="rightframe">下载资料</a></td>                        
+                        <td><a href="index.php?action=news&catetype=2"  class="navLink" target="rightframe">图片列表</a></td>                        
                     </tr>
                 </table>
             </li>

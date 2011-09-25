@@ -29,14 +29,6 @@ class AppAction extends RAF_Action {
 	}
 	
 	public function main(){
-		if ($this->access['accessid'] == '3'){
-			redirect('index.php?action=minisite');
-		}elseif ($this->access['accessid'] == '2'){
-			redirect('index.php?action=news&lang=en');
-		}elseif ($this->access['accessid'] == '1'){
-			redirect('index.php?action=news&lang=cn');
-		}else{
-			redirect('index.php?action=news');
-		}
+		redirect('index.php?action=content');
 	}
 }

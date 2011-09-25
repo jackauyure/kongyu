@@ -40,18 +40,13 @@
             <table border="0" width="95%" align="center">
                 <tr>       
                     <td class="tdTitle" nowrap align="right" style="height:40px;">
-                        <span id="ctl00_ContentPlaceHolder1_Label1"><?=$msg['name']?>:</span></td>
-                    <td>
-                        <input name="title" type="text" maxlength="10" id="title" style="width:168px;" value="<?=$sctitle?>"/>                        
-                    </td>     
-                    <td class="tdTitle" nowrap align="right" style="height:40px;">
-                        <span id="ctl00_ContentPlaceHolder1_Label1"><?=$msg['index_flag']?>:</span></td>
+                        <span id="ctl00_ContentPlaceHolder1_Label1">语言:</span></td>
                     <td>
 					<td>
-                        <select name="index_flag" id="index_flag">
+                        <select name="lan_type" id="lan_type">
 							<option value="">--<?=$msg['all']?>--</option>
-							<option value="1" <?php echo is_selected($index_flag,1);?>><?=$msg['yes']?></option>
-							<option value="0" <?php echo is_selected($index_flag,0);?>><?=$msg['no']?></option>
+							<option value="1" <?php echo is_selected($lan_type,1);?>>中文</option>
+							<option value="2" <?php echo is_selected($lan_type,2);?>>英文</option>
 						</select>                         
                     </td>
                     <td class="tdTitle" nowrap align="right" style="height:40px;"><span id="ctl00_ContentPlaceHolder1_Label2"><?=$msg['newstype']?>:</span></td>
@@ -90,12 +85,10 @@
 		<thead>
 		<tr class="HeaderStyle">
 			<th scope="col">&nbsp;</th>
-			<th scope="col"><?=$msg['title']?></th>
-			<th scope="col"><?=$msg['newsdate']?></th>
+			<th scope="col">图片</th>
+			<th scope="col">语言</th>
 			<th scope="col"><?=$msg['newstype']?></th>
 			<th scope="col"><?=$msg['isshow']?></th>
-			<th scope="col"><?=$msg['upadmin']?></th>
-			<th scope="col"><?=$msg['update']?></th>
 			<th scope="col">&nbsp;</th>
 		</tr>
 		</thead>
@@ -108,13 +101,12 @@
 	               <input class="newsid" type="checkbox" name="id[]" value='<?=$news['news_id']?>'/>
 	            </td>
 	            <td align="left">
-	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=news&method=edit&id=<?=$news['news_id']?>&catetype=<?=$this->catetype?>"><?=cstr($news['title'])?></a>
+	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=news&method=edit&id=<?=$news['news_id']?>&catetype=<?=$this->catetype?>">
+					<img src="<?=$GLOBALS['upimages'].'s_'.$news["team_img"]?>" width="100"></a>
 	            </td>
-	            <td align="center"><?=toDate($news['news_date'])?></td>
+	            <td align="center"><?=($news['lan_type']=='1')?'中文':'英文'?></td>
 	            <td align="center"><?=isset($categorylist[$news['category_id']])?$categorylist[$news['category_id']]:$msg['null']?></td>
 	            <td align="center"><?=($news['show_flag']=='1')?$msg['yes']:$msg['no']?></td>
-	            <td align="center"><?=isset($adminlist[$news['update_user_id']])?$adminlist[$news['update_user_id']]:$msg['null']?></td>
-	            <td align="center"><?=toDate($news['update_date'])?></td>
 	            <td align="center">
 	            	<a class="GridViewUrl" href="<?=$GLOBALS['admin_root']?>index.php?action=news&method=edit&id=<?=$news['news_id']?>&catetype=<?=$this->catetype?>"><?=$msg['edit']?></a>
 	            	|
