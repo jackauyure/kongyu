@@ -1,0 +1,46 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/style
+svn://svn.boss.com/500wan
+
+
+
+2011-09-22T05:27:55.126752Z
+199271
+chenm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+swf
+dir
+
+images
+dir
+
+css
+dir
+
+picplayer
+dir
+
+picgallery
+dir
+
+js
+dir
+

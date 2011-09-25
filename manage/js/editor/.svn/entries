@@ -1,0 +1,67 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/editor
+svn://svn.boss.com/500wan
+
+
+
+2011-09-22T02:15:26.219064Z
+199173
+chenm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+lang
+dir
+
+loader.js
+file
+
+
+
+
+2011-09-20T10:47:31.000000Z
+23c8f029b761f0429164d4b185601874
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+plugins
+dir
+
+themes
+dir
+
+kindeditor.js
+file
+
+
+
+
+2011-08-17T06:46:22.000000Z
+0f9b831bd345fde27653b270debe47f8
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+php
+dir
+
+attached
+dir
+

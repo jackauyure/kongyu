@@ -1,0 +1,79 @@
+<?php
+/**
+ * @author Rusher.Ren
+ * @version 1.0 2011.09.14
+ */
+class NewsAction extends RAF_Action {
+	var $access;
+	/*
+	 * 默认加载方法
+	 */
+	public function NewsAction(){
+		$this->access	=	load_class('Access')->checkLogin();
+		if (!$this->access){
+			redirect($GLOBALS['admin_root'].'index.php?action=login');
+		}
+	}
+	
+	public function index() {
+		$_SESSION['request_url']=request_uri();
+	
+		
+		$db	=	DB::factory();
+<<<<<<< .mine
+		$row	=	$db->getAllRow("chn_users");
+		if (!empty($row)) foreach ($row as $tmp){
+			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
+		}
+		$row	=	$db->getAllRow("chn_category","show_flag = '1'","show_order desc");
+		if (!empty($row)) foreach ($row as $tmp){
+			$categorylist[$tmp['category_id']]	=	cstr($tmp['category_name']);
+		}
+		
+		$db->setPage(10);
+=======
+		$row	=	$db->getAllRow("chn_users");
+		if (!empty($row)) foreach ($row as $tmp){
+			$adminlist[$tmp['user_id']]	=	cstr($tmp['user_name']);
+		}
+		$row	=	$db->getAllRow("chn_category","show_flag = '1'","show_order desc");
+		if (!empty($row)) foreach ($row as $tmp){
+			$categorylist[$tmp['category_id']]	=	cstr($tmp['category_name']);
+		}
+>>>>>>> .r197963
+		$where	=	"1=1";
+		$sctitle	=	$this->doGet('title','');
+		if (!empty($sctitle)){
+			$where	.=	" AND title like '%".cstr($sctitle,'utf8','gbk')."%'";
+		}
+		$sccategory	=	$this->doGet('category_id','');
+		if (!empty($sccategory)){
+			$where	.=	" AND category_id = '".$sccategory."'";
+		}
+		$db->setPage(10);
+		$newslist	=	$db->getAllRow("chn_news",$where,"news_date desc");
+		$pagehtml	=	$db->page_html;
+				
+		include 'view/newslist.php';
+	}
+	
+	public function add(){
+		include 'newsadd.php';
+	}
+	
+	public function del(){
+		$temp1		=	$this->doGet('id','');
+		$idlist		=	$this->doPost('id',array());
+		if (!empty($temp1)){
+			array_push($idlist,$temp1);
+		}
+		$where	=	"news_id in (".implode(",",$idlist).")";
+		$db	=	DB::factory();
+		$res	=	$db->delete('chn_news',$where);
+		if ($res){
+			alert('删除成功!',$_SESSION['request_url'],1);
+		}else{
+			alert('删除失败!',$_SESSION['request_url'],1);
+		}
+	}
+}

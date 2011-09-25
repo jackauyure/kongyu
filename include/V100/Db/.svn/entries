@@ -1,0 +1,44 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/include/V100/Db
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T06:54:36.137087Z
+198738
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+DB.class.php
+file
+
+
+
+
+2011-09-15T06:33:16.000000Z
+4899b70ffe2d7902972abf4d295ec54e
+2011-09-15T08:16:11.764971Z
+197904
+renjm
+has-props
+
+Driver
+dir
+

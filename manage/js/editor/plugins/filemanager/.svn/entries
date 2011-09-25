@@ -1,0 +1,31 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/editor/plugins/filemanager
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+filemanager.js
+file
+
+
+
+
+2011-08-15T04:33:18.000000Z
+b469eb7ba7703f0bfa4be8c63b960647
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+images
+dir
+

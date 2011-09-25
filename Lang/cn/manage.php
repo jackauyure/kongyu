@@ -1,0 +1,83 @@
+<?php
+return array(
+	'newslist'	=>	'新闻列表',
+	'newsview'	=>	'新闻信息',
+	'category'	=>	'分类管理',
+	'name'		=>	'名称',
+	'index_flag'	=>	'是否推荐',
+	'newstype'	=>	'分类',
+	'checktype'	=>	'请选择分类',
+	'all'		=>	'全部',
+	'search'	=>	'查 询',
+
+	'category1'	=>	'赞助商分类管理',
+	'category2'	=>	'新闻分类管理',
+	'category3'	=>	'图片分类管理',
+	'category4'	=>	'视频分类管理',
+	'category6'	=>	'船队组别管理',
+	'category9'	=>	'帆船ABC分类管理',
+	'category11'	=>	'下载分类管理',
+	'category12'	=>	'友情链接分类管理',
+
+	'news1'	=>	'赞助商列表',
+	'news2'	=>	'新闻列表',
+	'news3'	=>	'图片列表',
+	'news4'	=>	'视频列表',
+	'news6'	=>	'船队资料',
+	'news9'	=>	'帆船ABC列表',
+	'news11'	=>	'下载资料',
+	'news12'	=>	'友情链接',
+
+    'videolist'	=>	'视频列表',
+	'videoview'	=>	'视频信息',
+	'videotype'	=>	'视频分类',
+	'videodate' =>	'视频日期',
+	'videoimg'  =>	'视频截图',
+	'videofile' =>	'视频文件',
+     
+    'imgcate'   =>  '请选择图片分类',
+
+	'type'			=>	'类型',
+	'title'			=>	'标题',
+	'tiny'			=>	'短标题',
+	'shorttitle'	=>	'简介',
+	'keyword'		=>	'关键字',
+	'newsdate'		=>	'日期',
+	'isshow'		=>	'是否显示',
+	'show'			=>	'是否显示',
+	'content'		=>	'正文',
+	'toindex'		=>	'是否推荐',
+	'tofocus'		=>	'是否焦点',
+	'topic'			=>	'是否视点图',
+	'order'		=>	'排序',
+	'upload'	=>	'上传',
+	'download'	=>	'下载',
+	'link'		=>	'链接',
+	'see'	=>	'预览',
+
+	'upadmin'	=>	'更新操作人',
+	'update'	=>	'更新日期',
+
+	'delsure'	=>	'确定要删除该信息?',
+
+	'add'		=>	'添加',
+	'edit'		=>	'编辑',
+	'del'		=>	'删除',
+	'checkall'	=>	'全选',
+	'submit'	=>	'确认',
+	'chanel'	=>	'取消',
+
+	'yes'	=>	'是',
+	'no'	=>	'否',
+	'null'	=>	'无',
+
+	'first'	=>	'首页',
+	'prev'	=>	'上页',
+	'next'	=>	'下页',
+	'last'	=>	'尾页',
+	'jump'	=>	'第%i%页',
+	'page'	=>	'第%i%页',
+	
+	'noid'	=>	'非法操作',
+);
+?>

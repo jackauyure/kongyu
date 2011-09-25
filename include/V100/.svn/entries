@@ -1,0 +1,85 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/include/V100
+svn://svn.boss.com/500wan
+
+
+
+2011-09-21T09:28:33.460355Z
+199149
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+Log
+dir
+
+Config
+dir
+
+Db
+dir
+
+Stdlib.php
+file
+
+
+
+
+2011-09-21T07:45:59.000000Z
+8e3c475439886cf730b76939e1a52595
+2011-09-21T09:28:33.460355Z
+199149
+renjm
+has-props
+
+Core
+dir
+
+Libs
+dir
+
+Filter.php
+file
+
+
+
+
+2010-12-10T07:38:40.000000Z
+272abf89dfd02e5df045895ecd7b966e
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+
+RAF.php
+file
+
+
+
+
+2010-12-10T07:38:37.000000Z
+cb9ab4c850af5f1fa9ed92257e1cfbab
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+
+Exception
+dir
+

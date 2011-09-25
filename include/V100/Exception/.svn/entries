@@ -1,0 +1,71 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/include/V100/Exception
+svn://svn.boss.com/500wan
+
+
+
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+Db.class.php
+file
+
+
+
+
+2010-12-10T07:39:13.000000Z
+6b3aa9498bd194197783229a5fabf022
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+
+_notes
+dir
+
+App.class.php
+file
+
+
+
+
+2010-12-10T07:39:14.000000Z
+0a3dbbf0aadbe908ed75a9cd3d933eeb
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+
+Cache.class.php
+file
+
+
+
+
+2010-12-10T07:39:14.000000Z
+130f1320337a3bbad52b3cfdcf9d011b
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+
+System.class.php
+file
+
+
+
+
+2010-12-10T07:39:12.000000Z
+3d984d441e2c08f6d19b95657aa7de26
+2011-09-14T06:34:42.824660Z
+197625
+renjm
+has-props
+

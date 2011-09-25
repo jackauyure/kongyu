@@ -1,0 +1,52 @@
+<?php
+return array(
+	'newslist'	=>	'新闻列表',
+	'newsview'	=>	'新闻信息',
+	'name'		=>	'名称',
+	'newstype'	=>	'新闻分类',
+	'checktype'	=>	'请选择新闻分类',
+	'search'	=>	'查 询',
+
+    'videolist'	=>	'视频列表',
+	'videoview'	=>	'视频信息',
+	'videotype'	=>	'视频分类',
+	'videodate' =>	'视频日期',
+	'videoimg'  =>	'视频截图',
+	'videofile' =>	'视频文件',
+
+
+	'title'			=>	'标题',
+	'tiny'			=>	'短标题',
+	'shorttitle'	=>	'简介',
+	'keyword'		=>	'关键字',
+	'newsdate'		=>	'新闻日期',
+	'isshow'		=>	'是否显示',
+	'show'			=>	'显示标记',
+	'content'		=>	'正文',
+	'toindex'		=>	'是否推荐',
+
+	'upadmin'	=>	'更新操作人',
+	'update'	=>	'更新日期',
+
+	'delsure'	=>	'确定要删除该新闻信息?',
+
+	'add'		=>	'添加',
+	'edit'		=>	'编辑',
+	'del'		=>	'删除',
+	'checkall'	=>	'全选',
+	'submit'	=>	'确认',
+	'chanel'	=>	'取消',
+
+	'yes'	=>	'是',
+	'no'	=>	'否',
+	'null'	=>	'无',
+
+	'first'	=>	'首页',
+	'prev'	=>	'上页',
+	'next'	=>	'下页',
+	'last'	=>	'尾页',
+	'jump'	=>	'第%i%页',
+	'page'	=>	'第%i%页',
+
+);
+?>

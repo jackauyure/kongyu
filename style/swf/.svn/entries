@@ -1,0 +1,42 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/style/swf
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T09:37:28.486440Z
+198845
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+flowplayer-3.2.4.swf
+file
+
+
+
+
+2011-09-20T02:53:22.000000Z
+d5c8e8a7738036107aa93de9930eb2de
+2011-09-20T09:37:28.486440Z
+198845
+renjm
+has-props
+
+flowplayer.controls-3.2.2.swf
+file
+
+
+
+
+2011-09-20T03:01:38.000000Z
+626be9c253c1949ff30e9ca42e407b87
+2011-09-20T09:37:28.486440Z
+198845
+renjm
+has-props
+

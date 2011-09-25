@@ -1,0 +1,164 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage
+svn://svn.boss.com/500wan
+
+
+
+2011-09-22T11:40:45.146949Z
+199475
+chenm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+Pics.class.php
+file
+
+
+
+
+2011-09-22T12:50:31.000000Z
+741f5a4caaf406db754b7c0eb747164f
+2011-09-22T11:38:28.976130Z
+199473
+chenm
+
+css
+dir
+
+Libs
+dir
+
+index.php
+file
+
+
+
+
+2011-09-14T07:02:49.000000Z
+e8858b1ab6d62e81f60f3c40a19650bc
+2011-09-14T09:02:19.964883Z
+197708
+renjm
+has-props
+
+Video.class.php
+file
+
+
+
+
+2011-09-22T12:50:31.000000Z
+fafcca8c56e3a093003eef74d7f47a36
+2011-09-22T11:05:25.371773Z
+199466
+chenm
+
+Login.class.php
+file
+
+
+
+
+2011-09-19T07:40:16.000000Z
+311ee7f65ed6b41c93d43dd7c29b21f2
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+Content.class.php
+file
+
+
+
+
+2011-09-21T12:17:20.000000Z
+ef3e2f8bedd8380e618a4f51d2d66146
+2011-09-21T10:28:37.955917Z
+199155
+chenm
+
+images
+dir
+
+News.class.php
+file
+199495
+
+
+
+2011-09-22T12:52:56.000000Z
+baab3d533d426df3d53d5b3f6f056287
+2011-09-22T12:55:18.072191Z
+199495
+renjm
+
+Category.class.php
+file
+
+
+
+
+2011-09-22T04:24:19.000000Z
+120fcda82b146192ba85a7347bae67ac
+2011-09-22T02:29:43.967968Z
+199176
+chenm
+
+view
+dir
+
+App.class.php
+file
+
+
+
+
+2011-09-19T11:42:17.000000Z
+c0bdbcb93a042b02e5143ae821ba815e
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+Minisite.class.php
+file
+
+
+
+
+2011-09-19T07:46:00.000000Z
+e7854d3a8e4e5c2b46ad9a4aecd63694
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+Miniweibo.class.php
+file
+
+
+
+
+2011-09-21T04:26:26.000000Z
+66bdcb9fed85d17313680eb84bb9a3f5
+2011-09-21T05:49:33.882204Z
+199036
+renjm
+
+js
+dir
+

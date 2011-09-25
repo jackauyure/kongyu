@@ -1,0 +1,54 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/editor/themes/default
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+default.gif
+file
+
+
+
+
+2011-08-04T16:11:08.000000Z
+d2dd314b0ceed1b0ae3830b768fe56ff
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+has-props
+
+default.css
+file
+
+
+
+
+2011-08-16T07:53:02.000000Z
+0e91930280e6546a0f924ef5bb86a383
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+bg.gif
+file
+
+
+
+
+2011-07-02T14:45:24.000000Z
+809ed6013a65df3a96190b5d1bf5a07e
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+has-props
+

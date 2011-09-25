@@ -1,0 +1,70 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/calendar
+svn://svn.boss.com/500wan
+
+
+
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+calendar.htm
+file
+
+
+
+
+2011-06-14T05:54:52.000000Z
+265cb63f89bf416fea05c6a2a1995d49
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+config.js
+file
+
+
+
+
+2011-06-14T05:54:52.000000Z
+7a59ab6855c6587eb1b95616de929f74
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+lang
+dir
+
+calendar.js
+file
+
+
+
+
+2011-06-14T05:54:52.000000Z
+0288e24e1d6cc083c8cf8604aa8150ee
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+
+skin
+dir
+
+calendar_core.js
+file
+
+
+
+
+2011-06-14T05:54:52.000000Z
+643a5d60ca214697be8f29c2e6cb76a9
+2011-09-19T12:05:11.781977Z
+198549
+renjm
+

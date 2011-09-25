@@ -1,0 +1,52 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/editor/plugins/code
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+prettify.js
+file
+
+
+
+
+2011-08-01T04:56:54.000000Z
+709bfcc456c694bfe8ee86d184a1c360
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+code.js
+file
+
+
+
+
+2011-08-15T04:33:18.000000Z
+88b932e35a7c1831d60444f7e2bfa1bc
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+prettify.css
+file
+
+
+
+
+2011-08-01T04:56:54.000000Z
+9d053752fc526cc17066a27a5b1a8b11
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+

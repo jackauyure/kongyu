@@ -1,0 +1,211 @@
+<?php
+
+class PicsAction extends RAF_Action {
+	var $access;
+	var $db;
+	
+	/*
+	 * 默认加载方法
+	 */
+	public function PicsAction(){
+		$access	=	load_class('Access')->checkLogin();
+		if (!$access){
+			redirect($GLOBALS['admin_root'].'index.php?action=login');
+<<<<<<< .mine
+		}
+		if ($access['accessid'] != '3' && $access['accessid'] != '0'){	
+			redirect($GLOBALS['admin_root'].'index.php?action=login','top');
+		}
+=======
+		}	
+>>>>>>> .r198736
+		$this->db	=  DB::factory();
+	}
+	
+   public function index() {
+		$_SESSION['request_url']=request_uri();
+		$sorts  = $this->db->getAll("SELECT * FROM chn_category WHERE category_type = 3 ORDER BY category_id ASC");
+		$sort	=	$this->doGet('sort',$sorts[0]['category_id']);	
+		$imglist	=	$this->db->getAll("SELECT * FROM chn_img WHERE category_id = ".$sort);
+		$st = array();
+		foreach ($sorts as $s){
+			$st[$s['category_id']] = $s;
+		}
+		include 'view/piclist.php';
+   }
+   
+   public function edit() {
+		$_SESSION['request_url']=request_uri();
+   	    $id	=	$this->doGet('id');	
+        $sorts  = $this->db->getAll("SELECT * FROM chn_category WHERE category_type =3 ORDER BY category_id ASC");
+        $st = array();
+		foreach ($sorts as $s){
+			$st[$s['category_id']] = $s;
+		}
+		$found = true;
+	    $imginfo	=	$this->db->getOneRow('chn_img','img_id = '.$id,'img_id DESC');	
+	    include 'view/picedit.php';
+	}
+	
+    public function add() {
+    	$sorts  = $this->db->getAll("SELECT * FROM chn_category WHERE category_type =3 ORDER BY category_id ASC");
+        $st = array();
+		foreach ($sorts as $s){
+			$st[$s['category_id']] = $s;
+		}
+    	$found = false;
+    	$sort  = $this->doGet('sort');
+	    include 'view/picedit.php';	
+	}
+	
+    public function del() {	    	
+    	$id     = $this->doGet('id');	
+    	$result = $this->db->delete('chn_img','img_id = '.$id);
+	    if ($result){
+				alert('删除成功!',$_SESSION['request_url'],1);
+		}else{
+				alert('删除失败!',$_SESSION['request_url'],1);
+		} 			
+	}
+	
+    public function actpost() {
+	    $posts	=	$this->doPost();	   	    	    
+<<<<<<< .mine
+	   	$path = dirname(dirname(__FILE__)).'/images/'; 	 
+        switch ($_FILES['imgfile']['type']){
+		   		case 'image/jpeg' :
+		   			$suffix = '.jpg';
+		   			break;
+		   		case 'image/png' :
+		   			$suffix = '.png';
+		   			break;
+		   		case 'image/gif' :
+		   			$suffix = '.gif';
+		   			break;
+		   		default:
+		   			$suffix = false;	   		   		   		
+		}
+		
+		
+		   	  	     		   
+	    if($posts['act'] == 'edit'){ // 修改             
+		    if(!$suffix && $_FILES['imgfile']['size']!=0){	   	
+		   	    alert('图片类型不支持!',$_SESSION['request_url'],1);			   			   		
+		    }
+	        $filename = $_FILES['imgfile']['size']!=0 ? md5($_FILES['imgfile']['name']).$suffix : $posts['picname'];	
+		    if (file_exists(dirname(dirname(__FILE__)).'/images/'.$filename) && $filename != $posts['picname'])
+		    {
+		       alert('图片名重复!',$_SESSION['request_url'],1);
+		    }else{      	
+		       move_uploaded_file($_FILES["imgfile"]["tmp_name"],$path.$filename);                     
+		    }
+	    		    	
+	    	
+=======
+	   	$path = dirname(dirname(__FILE__)).'/images/'; 	
+	   	$file = $_FILES['imgfile']; 
+	   	$up	=	new Upload($path, $file);
+	   	$fresult = $up->doup();	   	 	  	   	   			   	  	     		   
+	    if($posts['act'] == 'edit'){ // 修改             		    		    		    		    	      	    		    		    	
+>>>>>>> .r198736
+	    	$result =  $this->db->update('chn_img',
+	    	array(
+	    	   'img_title'   => iconv('utf-8', 'gbk', $posts['img_title']),
+	    	   'category_id'  => $posts['category_id'],
+	    	   'big_pic' => $up->filename,
+	    	   'img_desc'=> iconv('utf-8', 'gbk', $posts['img_desc'])
+	    	),
+	    	   'img_id = '.$posts['img_id']
+	    	);      			
+	        if ($result && $fresult){
+	        	if($posts['big_pic']){
+	        	   unlink($path.$posts['big_pic']);
+	        	}
+				alert('修改成功!',$_SESSION['request_url'],1);
+			}else{
+				alert('修改失败!',$_SESSION['request_url'],1);
+			}    
+	    }else{                     //   增加	        	    
+	    	$result = $this->db->insert('chn_img',
+	    	array(
+	    	   'img_title'   => iconv('utf-8', 'gbk', $posts['img_title']),
+	    	   'category_id'  => $posts['category_id'],
+	    	   'big_pic' => $up->filename,
+	    	   'img_desc'     => iconv('utf-8', 'gbk', $posts['img_desc'])
+	    	));	    
+	        if ($result && $fresult){
+				alert('添加成功!',$_SESSION['request_url'],1);
+			}else{
+				alert('添加失败!',$_SESSION['request_url'],1);
+			}     
+	    }
+	    
+	}
+	
+   
+   public function category() {
+   	   $_SESSION['request_url']=request_uri();
+   	   $catetype = $this->doGet('catetype','2');
+   	   $catinfo = $this->db->getAll("SELECT * FROM  chn_category WHERE category_type = ".$catetype); 
+   	   include 'view/category.php';
+   }
+	
+   public function catedit() {
+   	    $_SESSION['request_url']=request_uri();
+   	    $id	=	$this->doGet('id');	
+		$found = true;
+	    $catinfo	=	$this->db->getOneRow('chn_category','category_id = '.$id,'category_id DESC');	
+	    include 'view/categoryedit.php';
+	
+	}
+	
+    public function catadd() {	
+    	$_SESSION['request_url']=request_uri();
+    	$catetype = $this->doGet('catetype','2');
+    	$found = false;
+	    include 'view/categoryedit.php';	
+	}
+	
+    public function catdel() {	    	
+    	$id     = $this->doGet('id');	
+    	$result = $this->db->delete('chn_category','category_id = '.$id);
+	    if ($result){
+				alert('删除成功!',$_SESSION['request_url'],1);
+		}else{
+				alert('删除失败!',$_SESSION['request_url'],1);
+		} 			
+	}
+	
+	
+    public function catactget() {
+	    $gets	=	$this->doGet();	   
+	    if($gets['act'] == 'edit'){ //修改
+	        $result = $this->db->update('chn_category',
+	         array('category_name' =>iconv('utf-8', 'gbk', $gets['category_name']),
+	               'show_order'    =>$gets['show_order'],
+	               'show_flag'     =>$gets['show_flag']	               
+	         ),
+	         'category_id = '.$gets['category_id']
+	        );
+		    if ($result){
+				alert('修改成功!',$_SESSION['request_url'],1);
+			}else{
+				alert('修改失败!',$_SESSION['request_url'],1);
+			}    
+	    }else{
+	        $result = $this->db->insert('chn_category',
+	         array('category_name' =>iconv('utf-8', 'gbk', $gets['category_name']),
+	               'category_type' =>$gets['category_type'],
+	               'show_order'    =>$gets['show_order'],
+	               'show_flag'     =>$gets['show_flag']	               
+	         ));
+		    if ($result){
+				alert('添加成功!',$_SESSION['request_url'],1);
+			}else{
+				alert('添加失败!',$_SESSION['request_url'],1);
+			}     
+	    }
+	}
+	
+}	
+?>	

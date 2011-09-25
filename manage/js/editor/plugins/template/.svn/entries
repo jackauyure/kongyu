@@ -1,0 +1,31 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/js/editor/plugins/template
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+html
+dir
+
+template.js
+file
+
+
+
+
+2011-08-15T15:21:34.000000Z
+303b4613a27c42914c6da6acb4869840
+2011-09-20T11:33:36.089676Z
+198912
+renjm
+

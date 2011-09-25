@@ -1,0 +1,52 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/manage/Libs
+svn://svn.boss.com/500wan
+
+
+
+2011-09-22T09:39:57.210450Z
+199403
+chenm
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+57f6889e-f197-11dc-8ee6-95aac4d8ccb4
+
+Access.class.php
+file
+
+
+
+
+2011-09-15T02:49:53.000000Z
+d500968e99b098cd3ab12aa6798e466a
+2011-09-15T07:10:09.196103Z
+197876
+chenm
+
+Upload.class.php
+file
+
+
+
+
+2011-09-22T11:00:18.000000Z
+7c244328b29de243c259f07fc7efe73a
+2011-09-22T09:39:57.210450Z
+199403
+chenm
+
