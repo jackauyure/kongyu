@@ -1,4 +1,5 @@
-http://www.verydz.com/
+网站:	http://www.verydz.com/
 
-xiaopingkuo@gmail.com 
-254622 
+用户名:	xiaopingkuo@gmail.com 
+
+密码:	254622 
