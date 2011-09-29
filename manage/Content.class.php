@@ -28,6 +28,10 @@ class ContentAction extends RAF_Action {
 		if (!empty($sctitle)){
 			$where	.=	" AND title like '%".cstr($sctitle,'utf8','gbk')."%'";
 		}
+		$lan_type	=	$this->doGet('lan_type','');
+		if ($lan_type != ''){
+			$where	.=	" AND lan_type = '".$lan_type."'";
+		}
 		$sctype	=	$this->doGet('type','');
 		if (!empty($sctype)){
 			$where	.=	" AND type like '%".cstr($sctype,'utf8','gbk')."%'";

@@ -92,7 +92,7 @@ class ContentAction extends RAF_Action {
 	public function kehu(){
 		alert('no');
 		$db	=	DB::factory();
-        $id =	7;
+        $id =	19;
 		if(''==$id){
 		  exit('参数出错');
 		}

@@ -41,7 +41,11 @@
                     <td class="tdTitle" nowrap align="right" style="height:40px;">
                         <span id="ctl00_ContentPlaceHolder1_Label1"><?=$msg['type']?>:</span></td>
                     <td>
-                        <input name="type" type="text" maxlength="10" id="type" style="width:168px;" value="<?=$sctype?>"/>                        
+                        <select name="lan_type" id="lan_type">
+							<option value="">--<?=$msg['all']?>--</option>
+							<option value="1" <?php echo is_selected($lan_type,1);?>>中文</option>
+							<option value="2" <?php echo is_selected($lan_type,2);?>>英文</option>
+						</select>                         
                     </td>     
                     <td class="tdTitle" nowrap align="right" style="height:40px;">
                         <span id="ctl00_ContentPlaceHolder1_Label1"><?=$msg['name']?>:</span></td>

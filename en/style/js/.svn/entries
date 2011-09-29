@@ -1,0 +1,64 @@
+8
+
+dir
+199494
+svn://svn.boss.com/500wan/trunk/php/soft.500wan.com/html/chncup/style/js
+svn://svn.boss.com/500wan
+
+
+
+2011-09-20T10:11:13.284928Z
+198870
+renjm
+
+
+svn:special svn:externals svn:needs-lock
+
+flowplayer-3.2.4.min.js
+file
+
+
+
+
+2011-09-20T02:52:14.000000Z
+ae57a95886a2fbf5ca50824ecc11d7ef
+2011-09-20T10:11:13.284928Z
+198870
+renjm
+
+topbanner.js
+file
+
+
+
+
+2011-09-20T06:00:43.000000Z
+39a8e6468f68f2010e26dc770d3f29c8
+2011-09-20T10:11:13.284928Z
+198870
+renjm
+
+DD_belatedPNG.js
+file
+
+
+
+
+2011-09-20T02:51:06.000000Z
+bc2fe2661350a6c742a83cebf00cb86e
+2011-09-20T10:11:13.284928Z
+198870
+renjm
+
+jquery-1.5.min.js
+file
+
+
+
+
+2011-02-15T03:46:56.000000Z
+63c1bc2eb898f68b943e1b0fdd98c746
+2011-09-20T10:11:13.284928Z
+198870
+renjm
+

@@ -23,7 +23,7 @@ class NewsAction extends RAF_Action {
 		$db	=	DB::factory();
 		
 		
-		$where	=	"lan_type = '".$GLOBALS['lantype']."' AND show_flag = '1' AND category_id = '".$category_id."'";
+		$where	=	"show_flag = '1' AND category_id = '".$category_id."'";
 		$order	=	"news_date DESC";
 		$sql	=	"SELECT * FROM chn_news WHERE $where ORDER BY $order";
 		
@@ -56,7 +56,7 @@ class NewsAction extends RAF_Action {
 		$db	=	DB::factory();
 		
 		
-		$where	=	"lan_type = '".$GLOBALS['lantype']."' AND show_flag = '1' AND category_id = '".$category_id."'";
+		$where	=	" show_flag = '1' AND category_id = '".$category_id."'";
 		$order	=	"news_date DESC";
 		$sql	=	"SELECT * FROM chn_news WHERE $where ORDER BY $order";
 		

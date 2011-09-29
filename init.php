@@ -41,7 +41,7 @@ $GLOBALS['www_root']	=	'http://localhost/kongyu/';
 $GLOBALS['en_root']		=	$GLOBALS['www_root'].'en/';
 $GLOBALS['admin_root']	=	$GLOBALS['www_root'].'manage/';
 $GLOBALS['mini_root']	=	$GLOBALS['www_root'].'minisite/';
-$GLOBALS['style']		=	$GLOBALS['www_root']. 'style/';
+$GLOBALS['style']		=	'style/';
 
 //上传用
 $GLOBALS['upload']         =   dirname(__FILE__).'/upload/';
