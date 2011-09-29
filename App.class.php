@@ -9,7 +9,8 @@ class AppAction extends RAF_Action {
 	}
 	
 	public function index() {
-		
+		redirect($GLOBALS['url'][0]);
+		exit;
 		$db	=	DB::factory();
 		
 		// 取第一条新闻类型

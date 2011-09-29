@@ -18,11 +18,11 @@
 <table id="__01" width="1024" height="744" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tr>
 		<td colspan="3">
-			<img src="<?=$GLOBALS['style']?>images/qytc_01.gif" width="1024" height="134" alt="" usemap="#MapTop"></td>
+			<img src="<?=$GLOBALS['style']?>images/cpxc_01.gif" width="1024" height="134" alt="" usemap="#MapTop"></td>
 	</tr>
 	<tr>
 		<td>
-			<img src="<?=$GLOBALS['style']?>images/qytc_02.gif" width="194" height="816" alt="" usemap="#Left"></td>
+			<img src="<?=$GLOBALS['style']?>images/cpxc_02.gif" width="194" height="816" alt="" usemap="#Left"></td>
 		<td width="798" height="816" valign="top">
 			<table width="700"  border="0" cellspacing="20" cellpadding="0" align="center">
               <tr>
@@ -33,8 +33,7 @@
 					if (!empty($news_list)) foreach ($news_list as $v){
 						$i++;
 					?>
-                    <td height="180" align="center" valign="top"><a href="<?=$GLOBALS['upimages'].$v["team_img"]?>" target="_blank"><table cellspacing="4" bgcolor="#f0dfd5">
-                    <tr><td><img src="<?=$GLOBALS['upimages'].'s_'.$v["team_img"]?>" width="160" height="107" border=0 /></td></tr></table><a></td>
+                    <td height="220" align="center" valign="top"><a href="<?=$GLOBALS['upimages'].$v["team_img"]?>" target="_blank"><img src="<?=$GLOBALS['upimages'].'s_'.$v["team_img"]?>" width="140" height="170" border="0" /></td>
 					<?
 						if($i%3 == 0){
 							echo '</tr><tr>';

@@ -65,9 +65,9 @@ $GLOBALS['url']	=	array(
 	'?action=content&method=shebei',
 	'?action=content&method=kehu',
 	'?action=content&method=shehuizeren',
-	'?action=news&id=2',
-	'?action=content&method=shebei',
-	'?action=content&method=shebei',
+	'?action=news',
+	'?action=content&method=rlzy',
+	'?action=content&method=lxwm',
 
 	// 9-13
 	'?action=content&method=shebei',
@@ -77,8 +77,8 @@ $GLOBALS['url']	=	array(
 	'?action=content&method=xinxibaohu',
 
 	// 14-15
-	'?action=news&id=2',
-	'?action=news&id=3',
+	'?action=news',
+	'?action=news&method=cpxc',
 );
 
 ?>

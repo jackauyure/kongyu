@@ -14,51 +14,25 @@
 <![endif]-->
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- ImageReady Slices (关于康.jpg) -->
-<table id="__01" width="1024" height="744" border="0" cellpadding="0" cellspacing="0" align="center">
+<!-- ImageReady Slices (设备.jpg) -->
+<table id="__01" width="1024" height="746" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tr>
 		<td colspan="3">
-			<img src="<?=$GLOBALS['style']?>images/qytc_01.gif" width="1024" height="134" alt="" usemap="#MapTop"></td>
+			<img src="<?=$GLOBALS['style']?>images/lxwm_01.gif" width="1024" height="135" alt="" usemap="#MapTop"></td>
 	</tr>
 	<tr>
 		<td>
-			<img src="<?=$GLOBALS['style']?>images/qytc_02.gif" width="194" height="816" alt="" usemap="#Left"></td>
-		<td width="798" height="816" valign="top">
-			<table width="700"  border="0" cellspacing="20" cellpadding="0" align="center">
-              <tr>
-                <td><table width="100%"  border="0" cellspacing="0" cellpadding="10">
-                  <tr>
-					<?
-					$i=0;
-					if (!empty($news_list)) foreach ($news_list as $v){
-						$i++;
-					?>
-                    <td height="180" align="center" valign="top"><a href="<?=$GLOBALS['upimages'].$v["team_img"]?>" target="_blank"><table cellspacing="4" bgcolor="#f0dfd5">
-                    <tr><td><img src="<?=$GLOBALS['upimages'].'s_'.$v["team_img"]?>" width="160" height="107" border=0 /></td></tr></table><a></td>
-					<?
-						if($i%3 == 0){
-							echo '</tr><tr>';
-						}
-					}	
-					?>
-                  </tr>
-                </table></td>
-              </tr>
-              <tr>
-                <td align="right" valign="top"><?if (!empty($news_list)){echo $pagehtml;}?></td>
-              </tr>
-            </table>
-		</td>
+			<img src="<?=$GLOBALS['style']?>images/lxwm_02.gif" width="513" height="182" alt=""></td>
+		<td background="<?=$GLOBALS['style']?>images/lxwm_03.gif" width="426" height="182"><?=$nr['content']?></td>
 		<td>
-			<img src="<?=$GLOBALS['style']?>images/qytc_04.gif" width="32" height="816" alt=""></td>
+			<img src="<?=$GLOBALS['style']?>images/lxwm_04.gif" width="85" height="182" alt=""></td>
 	</tr>
 	<tr>
 		<td colspan="3">
-			<img src="<?=$GLOBALS['style']?>images/qytc_05.gif" width="1024" height="30" alt=""></td>
+			<img src="<?=$GLOBALS['style']?>images/lxwm_05.gif" width="1024" height="429" alt=""></td>
 	</tr>
 	<? include 'view/end.php'?>
 </table>
-<!-- End ImageReady Slices -->
 <map name="MapTop">
   <area shape="rect" coords="281,52,349,77" 	href="<?=$GLOBALS['url'][0]?>">
   <area shape="rect" coords="55,92,94,112" 		href="<?=$GLOBALS['url'][1]?>">
@@ -69,10 +43,11 @@
   <area shape="rect" coords="702,49,753,80" 	href="<?=$GLOBALS['url'][6]?>">
   <area shape="rect" coords="779,49,865,77" 	href="<?=$GLOBALS['url'][7]?>">
   <area shape="rect" coords="892,49,965,78" 	href="<?=$GLOBALS['url'][8]?>">
-</map>
-<map name="Left" id="Left">
-  <area shape="rect" coords="49,29,158,57" href="<?=$GLOBALS['url'][14]?>">
-  <area shape="rect" coords="50,65,159,95" href="<?=$GLOBALS['url'][15]?>">
+  <area shape="rect" coords="269,145,350,173"	href="<?=$GLOBALS['url'][9]?>">
+  <area shape="rect" coords="269,178,351,203"	href="<?=$GLOBALS['url'][10]?>">
+  <area shape="rect" coords="270,209,352,240"	href="<?=$GLOBALS['url'][11]?>">
+  <area shape="rect" coords="269,246,350,273"	href="<?=$GLOBALS['url'][12]?>">
+  <area shape="rect" coords="269,279,354,309"	href="<?=$GLOBALS['url'][13]?>">
 </map>
 </body>
 </html>

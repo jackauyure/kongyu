@@ -111,4 +111,27 @@ class ContentAction extends RAF_Action {
 		$nr	=	$db->getOneRow('chn_chncup',$where,'');		
 		include 'view/shehuizeren.php';
 	}
+
+	public function rlzy(){
+		alert('no');
+		$db	=	DB::factory();
+        $id =	8;
+		if(''==$id){
+		  exit('参数出错');
+		}
+		$where = 'chncup_id ='.$id;
+		$nr	=	$db->getOneRow('chn_chncup',$where,'');		
+		include 'view/rlzy.php';
+	}
+
+	public function lxwm(){
+		$db	=	DB::factory();
+        $id =	9;
+		if(''==$id){
+		  exit('参数出错');
+		}
+		$where = 'chncup_id ='.$id;
+		$nr	=	$db->getOneRow('chn_chncup',$where,'');		
+		include 'view/lxwm.php';
+	}
 }

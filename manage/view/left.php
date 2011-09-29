@@ -75,36 +75,6 @@
             </li>
         </ul>
     </div>
-    <!-- mini站点管理 -->
-    <div id="head9" class="headClass">
-        <table border="0" width="80%" style="height:100%;" align="center">
-            <tr>
-                <td><a class="articleTitle" href="javascript:ShowContent(10)" >MINI站点管理</a></td>
-                <td width="40"><a href="javascript:ShowContent(10)" ><img src="images/icon1.png" id="Img10" border="0"/></a></td>
-            </tr>
-        </table>
-    </div>
-    <div class="menu_list2" id="content10" style="display:none;">
-        <ul>               
-           <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=minisite" class="navLink" target="rightframe">基本信息设置</a></td>                        
-                    </tr>
-                </table>
-            </li>     
-           <li>
-                <table border="0" width="80%" style="height:100%;" align="center">
-                    <tr>
-                        <td width="20"><img src="images/icon3.png" /> </td>
-                        <td><a href="index.php?action=miniweibo" class="navLink" target="rightframe">微博展示设置</a></td>                        
-                    </tr>
-                </table>
-            </li>                                      
-        </ul>
-    </div>
-    <!-- mini站点管理结束 -->
 </body>
 </html>
 <script type="text/javascript" language="javascript">
